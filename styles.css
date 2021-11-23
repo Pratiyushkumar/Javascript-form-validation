@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Open+Sans:wght@300&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap");
+
+:root {
+  --primary-fontFamily: "Open Sans", sans-serif;
+  --secondary-fontFamily: "Source Sans Pro", sans-serif;
+  --success: #116530;
+  --warning: #ffcc1d;
+  --failure: #f90716;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #e3f0e3;
+  /* height: 100vh; */
+  margin-bottom: 20px;
+}
+
+.form {
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
+  top: 5rem;
+  left: 17rem;
+  border: 10px solid white;
+  height: 100%;
+  width: 60vw;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 27px 11px grey;
+}
+
+.signupHeading {
+  font-family: var(--primary-fontFamily);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.formField .input-Label {
+  font-family: var(--secondary-fontFamily);
+  display: block;
+  font-size: 30px;
+  margin-left: 72px;
+  margin-bottom: 10px;
+  margin-top: 12px;
+}
+
+.formField .userInput {
+  display: block;
+  margin-left: 76px;
+  margin-right: 20px;
+  /* margin-top: 13px; */
+  width: 50vw;
+  height: 50px;
+  border-radius: 15px;
+  border: 1px solid black;
+  outline: none;
+}
+
+.formField .userInput .success {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.formField .userInput .error {
+  border-color: var(--failure);
+  color: var(--failure);
+}
+.formField small {
+  color: var(--failure);
+}
+
+#submitBtn {
+  margin-left: 21rem;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+  height: 42px;
+  width: 140px;
+  font-family: var(--secondary-fontFamily);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 1px solid white;
+  background-color: #113cfc;
+}
+
+#submitBtn:hover {
+  background-color: #0f00ff;
+}
