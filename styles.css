@@ -75,6 +75,8 @@ body {
   color: var(--failure);
 }
 .formField small {
+  margin-left: 50px;
+  font-size: 25px;
   color: var(--failure);
 }
 

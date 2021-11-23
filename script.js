@@ -8,34 +8,45 @@ const confirmPasswordEL = document.querySelector("#Confirmpassword");
 let small = document.querySelector("small");
 
 // Submit event listener
-formValidation.addEventListener("submit", (event) => {
+formValidation.addEventListener("input", (event) => {
   console.log("clicked on form");
   event.preventDefault();
-  switch (event.target.id) {
-    case "fullName":
-      fullNameValidation();
-      break;
+  // let inputFieldValues =
+  //   fullNameValidation() &&
+  //   phoneNumberValidation() &&
+  //   emailAddressValidation() &&
+  //   urlValidation() &&
+  //   passwordValidation() &&
+  //   confirmPasswordValidation();
+  // if (!inputFieldValues) {
+  //   alert("Input Fields can not be empty");
+  // } else {
+    switch (event.target.id) {
+      case "fullName":
+        fullNameValidation();
+        break;
 
-    case "phoneNumber":
-      phoneNumberValidation();
-      break;
+      case "phoneNumber":
+        phoneNumberValidation();
+        break;
 
-    case "emailAddress":
-      emailAddressValidation();
-      break;
+      case "emailAddress":
+        emailAddressValidation();
+        break;
 
-    case "websiteURL":
-      urlValidation();
-      break;
+      case "websiteURL":
+        urlValidation();
+        break;
 
-    case "password":
-      passwordValidation();
-      break;
+      case "password":
+        passwordValidation();
+        break;
 
-    case "Confirmpassword":
-      confirmPasswordValidation();
-      break;
-  }
+      case "Confirmpassword":
+        confirmPasswordValidation();
+        break;
+    }
+  // }
 });
 
 // validation Utility Function
@@ -75,6 +86,7 @@ function validatePhoneNumber(phone) {
 // Success and Error utility function
 function showSuccessMessage(input) {
   let formelement = input.parentElement;
+  console.log(formelement);
   formelement.classList.add("success");
   formelement.classList.remove("error");
   let error = formelement.querySelector("small");
@@ -104,7 +116,7 @@ function fullNameValidation() {
 function phoneNumberValidation() {
   let phoneNumber = phoneNumberEL.value.trim();
   if (!isRequired(phoneNumber)) {
-    showErrorMessage(phoneNumberEL, "FullName required");
+    showErrorMessage(phoneNumberEL, "PhoneNumber required");
   } else if (!validatePhoneNumber(phoneNumber)) {
     showErrorMessage(phoneNumberEL, "Enter correct phone number");
   } else {
