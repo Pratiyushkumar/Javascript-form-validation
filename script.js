@@ -21,31 +21,35 @@ formValidation.addEventListener("input", (event) => {
   // if (!inputFieldValues) {
   //   alert("Input Fields can not be empty");
   // } else {
-    switch (event.target.id) {
-      case "fullName":
-        fullNameValidation();
-        break;
+  switch (event.target.id) {
+    case "fullName":
+      fullNameValidation();
+      break;
 
-      case "phoneNumber":
-        phoneNumberValidation();
-        break;
+    case "phoneNumber":
+      phoneNumberValidation();
+      break;
 
-      case "emailAddress":
-        emailAddressValidation();
-        break;
+    case "emailAddress":
+      emailAddressValidation();
+      break;
 
-      case "websiteURL":
-        urlValidation();
-        break;
+    case "websiteURL":
+      urlValidation();
+      break;
 
-      case "password":
-        passwordValidation();
-        break;
+    case "password":
+      passwordValidation();
+      break;
 
-      case "Confirmpassword":
-        confirmPasswordValidation();
-        break;
-    }
+    case "Confirmpassword":
+      confirmPasswordValidation();
+      break;
+
+    default:
+      alert("Please Enter the input values");
+      break;
+  }
   // }
 });
 
